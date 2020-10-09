@@ -28,7 +28,7 @@ namespace DBLybrary.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Sourse = LENOVO-PC; Database=Dblybrary; Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Data Source=LENOVO-PC;Initial Catalog=lybrary_db;Integrated Security=True;");
                 //optionsBuilder.UseSqlite("Data Source=C:\\Users\\Алексей\\Downloads\\SQLiteStudio\\DB\\lybrary.db");
             }
         }
