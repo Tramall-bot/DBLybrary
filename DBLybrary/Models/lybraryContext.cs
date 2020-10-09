@@ -47,17 +47,17 @@ namespace DBLybrary.Models
                 entity.Property(e => e.BkAuthor)
                     .IsRequired()
                     .HasColumnName("Bk_Author")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.BkName)
                     .IsRequired()
                     .HasColumnName("Bk_Name")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.BkRealiseDate)
                     .IsRequired()
                     .HasColumnName("Bk_Realise_Date")
-                    .HasColumnType("DATE");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.GenId)
                     .HasColumnName("Gen_ID")
@@ -77,7 +77,7 @@ namespace DBLybrary.Models
                     .HasForeignKey(d => d.PubId)
                     .OnDelete(DeleteBehavior.ClientSetNull);
             });
-
+            
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.HasKey(e => e.EmpId);
@@ -90,7 +90,7 @@ namespace DBLybrary.Models
                 entity.Property(e => e.EmpAddress)
                     .IsRequired()
                     .HasColumnName("Emp_Address")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.EmpAge)
                     .HasColumnName("Emp_Age")
@@ -99,22 +99,22 @@ namespace DBLybrary.Models
                 entity.Property(e => e.EmpFullName)
                     .IsRequired()
                     .HasColumnName("Emp_Full_Name")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.EmpPassportData)
                     .IsRequired()
                     .HasColumnName("Emp_Passport_Data")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.EmpPhoneNumber)
                     .IsRequired()
                     .HasColumnName("Emp_Phone_Number")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.EmpSex)
                     .IsRequired()
                     .HasColumnName("Emp_Sex")
-                    .HasColumnType("CHAR");
+                    .HasColumnType("CHAR(16)");
 
                 entity.Property(e => e.PosId)
                     .HasColumnName("Pos_ID")
@@ -138,12 +138,12 @@ namespace DBLybrary.Models
                 entity.Property(e => e.GenDescription)
                     .IsRequired()
                     .HasColumnName("Gen_Description")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.GenName)
                     .IsRequired()
                     .HasColumnName("Gen_Name")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
             });
 
             modelBuilder.Entity<Position>(entity =>
@@ -158,17 +158,17 @@ namespace DBLybrary.Models
                 entity.Property(e => e.PosDuties)
                     .IsRequired()
                     .HasColumnName("Pos_Duties")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.PosName)
                     .IsRequired()
                     .HasColumnName("Pos_Name")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.PosRequirements)
                     .IsRequired()
                     .HasColumnName("Pos_Requirements")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.PosSalary)
                     .HasColumnName("Pos_Salary")
@@ -187,17 +187,17 @@ namespace DBLybrary.Models
                 entity.Property(e => e.PubAddress)
                     .IsRequired()
                     .HasColumnName("Pub_Address")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.PubCity)
                     .IsRequired()
                     .HasColumnName("Pub_City")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.PubName)
                     .IsRequired()
                     .HasColumnName("Pub_Name")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
             });
 
             modelBuilder.Entity<Reader>(entity =>
@@ -212,32 +212,32 @@ namespace DBLybrary.Models
                 entity.Property(e => e.RdAddress)
                     .IsRequired()
                     .HasColumnName("Rd_Address")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.RdBdDate)
                     .IsRequired()
                     .HasColumnName("Rd_BD_Date")
-                    .HasColumnType("DATE");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.RdFullName)
                     .IsRequired()
                     .HasColumnName("Rd_Full_Name")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.RdPassportData)
                     .IsRequired()
                     .HasColumnName("Rd_Passport_Data")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.RdPhoneNumber)
                     .IsRequired()
                     .HasColumnName("Rd_Phone_Number")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.RdSex)
                     .IsRequired()
                     .HasColumnName("Rd_Sex")
-                    .HasColumnType("CHAR");
+                    .HasColumnType("CHAR(16)");
             });
 
             modelBuilder.Entity<ReturnedBooks>(entity =>
@@ -257,12 +257,12 @@ namespace DBLybrary.Models
                 entity.Property(e => e.RbGiveOutDate)
                     .IsRequired()
                     .HasColumnName("Rb_GiveOut_Date")
-                    .HasColumnType("DATE");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.RbReturnDate)
                     .IsRequired()
                     .HasColumnName("Rb_Return_Date")
-                    .HasColumnType("DATE");
+                    .HasColumnType("VARCHAR(16)");
 
                 entity.Property(e => e.RbReturnFlag)
                     .HasColumnName("Rb_Return_Flag")
